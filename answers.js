@@ -85,3 +85,21 @@ dart.push("Hawkins"); //using push method to add an element at the end
 //array and replace it with "Gameboy".
 wolfy[0] = "Gameboy";
 
+
+////////////////////////////////
+// Yell at the Ninja Turtles
+////////////////////////////////
+//1. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+const turtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+//2. Use a for of loop (not a typo - try it out! Try a for of loop) to call toUpperCase() on each 
+//of them and print out the result.
+//researched here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+for (const turtle of turtles) { //typical construct for  FOR OF loop
+    const newName = turtle.toUpperCase(); //bringing to upper case thru new variable declaration
+    console.log(newName);
+}
+
+//As a developer, you'll be a lifelong learner and constantly encountering new things. 
+//We'll give you little stretches like this to get you used to looking at documentation and 
+//figuring some things out on your own. You've got this!
+
