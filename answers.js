@@ -61,3 +61,27 @@ if (input % 5 === 0) //checking if divisible by 5 only
     return 'Buzz';
 return (input); //if not divisible by 3 or 5, just returning the input number
 }
+
+
+////////////////////////////////
+// Wild Wild Life
+////////////////////////////////
+/*Use the following arrays to answer the questions below (name,species ,age, hometown): 
+You should be modifying the elements by accessing them. It is up to you which methods to use.*/
+
+const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
+const sharky = ["Sharky", "shark", 20, "Left Coast"]
+const plantee = ["Plantee", "plant",  5000 , "Mordor"]
+const porgee = ["Porgee", "Porg", 186, "Ahch-To"]
+const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
+
+//Plantee just had her birthday; change Plantee's array to reflect her being a year older.
+plantee[2]++; //index 2 for the 3rd element in the array
+//Change Wolfy's hometown from "Yukon Territory" to "Gotham City".
+wolfy[3] = "Gotham City"; //index 3 for the 4th element in the array
+//Give D'Art a second hometown by adding "Hawkins"
+dart.push("Hawkins"); //using push method to add an element at the end
+//Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfy 
+//array and replace it with "Gameboy".
+wolfy[0] = "Gameboy";
+
