@@ -103,3 +103,80 @@ for (const turtle of turtles) { //typical construct for  FOR OF loop
 //We'll give you little stretches like this to get you used to looking at documentation and 
 //figuring some things out on your own. You've got this!
 
+
+////////////////////////////////
+// Methods, Revisited
+////////////////////////////////
+
+//Here is a list of favMovies:
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+//Console log: the index of Titanic
+console.log(favMovies.indexOf('Titanic')); //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+//Do the following and console.log the final results (I have included some thought questions, 
+//you don't have to write out an answer for those marked as such):
+
+//Note: if you have to add to the array, feel free to add any movie you'd like
+favMovies.push('Swordfish');
+console.log(favMovies)
+console.log('**********************');
+//1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+favMovies.sort(); //it definitely altered the array pemanently.
+console.log(favMovies);
+console.log('**********************');
+//2. Use the method pop
+favMovies.pop(); //no need to specify the element. It removes the last element. Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
+console.log(favMovies);
+console.log('**********************');
+//3. push "Guardians of the Galaxy"
+favMovies.push('Guardians of the Galaxy');
+console.log(favMovies);
+console.log('**********************');
+//4. Reverse the array
+const reversedArray = favMovies.reverse();
+console.log(reversedArray); //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+console.log('**********************');
+//5. Use the shift method
+favMovies.shift(); //removes the first element
+console.log('**********************');
+//6. unshift - what does it return?
+favMovies.unshift('James Bond');
+console.log(favMovies);
+console.log('**********************');
+//7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained",
+//instead of counting it yourself) Thought question: did this permanently alter our array?
+console.log(favMovies.indexOf('Django Unchained')); //index is 15
+const indexToRemove = favMovies.indexOf('Django Unchained'); //method: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+favMovies.splice(indexToRemove, 1, 'Avatar'); //removing the found index, only one index and adding Avatar.
+console.log('Updated array:');
+console.log(favMovies); //we did change the array permanently.
+console.log('**********************');
+//8. slice the last half of the array (challenge yourself and try to programatically determine 
+//the middle of the array rather than counting it and hard coding it) - Thought question: 
+//did this permanently alter our array?
+console.log('**********************');
+  //PSEUDO CODING:
+  //1.take the array.length and divide it by 2 to figure out index in the middle.
+  //2. take that index and use it in slice method
+  const indexInTheMiddle = (favMovies.length / 2); 
+  console.log('Index in the middle is: ');
+  console.log(indexInTheMiddle);
+
+//9. store the value of your slice in a variable, console.log it - Thought question: what is going on here?
+const secondHalf = favMovies.slice(indexInTheMiddle);
+
+//10. console.log your final results
+console.log('Second half is: ');
+  console.log(secondHalf);
+//After running the above tasks, console.log the index of "Fast and Furious" 
+console.log(secondHalf.indexOf('Fast and Furious'));
+console.log('**********************');
+//-We removed it from the array, what value do we get when we look for the index of 
+//something that is not in the array?
+//lets try an example:
+const missingElement = [1,2,3];
+const missingIndex = missingElement.indexOf(94);
+console.log('Absent element\'s index is: ');
+console.log(missingIndex); //the JS returns -1 as an index for an absent element.
+//Thought question: that we declared the variable favMovies with const, and yet, 
+//we were allowed to change the array. Weird? Should we have used let? //no. we used const to declare the ARRAY, 
+//but we operate with array's elements.
