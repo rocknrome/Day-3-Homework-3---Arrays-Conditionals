@@ -180,3 +180,39 @@ console.log(missingIndex); //the JS returns -1 as an index for an absent element
 //Thought question: that we declared the variable favMovies with const, and yet, 
 //we were allowed to change the array. Weird? Should we have used let? //no. we used const to declare the ARRAY, 
 //but we operate with array's elements.
+console.log('**********************');
+
+
+////////////////////////////////
+// Where is Waldo
+////////////////////////////////
+//With the following multi-dimensional array
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+//1.Remove Eggbert (hint look at the slice/splice method(s))
+    //PSEUDO CODING:
+    //a. Find the index of the Eggbert
+    //b. Remove it with splice
+    //c. Log out the result
+const eggbertIndex = whereIsWaldo.indexOf('Eggbert');
+console.log('Index of Eggbert is: ');
+console.log(eggbertIndex);
+const noEggbert = whereIsWaldo.splice(eggbertIndex, 1);
+console.log(whereIsWaldo);
+console.log('**********************');
+// //2.Change "Neff" to "No One"
+//     //PSEUDO CODING:
+//     //a. Find index of Neff
+//     //b. use splice to replace it with No One
+//     //c. Log out results
+//     //Challenges: it is a nested array.
+//     //Advantages: We know that Neff is in the 3rd element of the array 
+//(index 1 cuz we remover the Eggbert which had index 1).
+    const subArray = whereIsWaldo[1];
+    const indexOfNeff = subArray.indexOf("Neff");
+    console.log("The index of Neff is: ");
+    console.log(indexOfNeff);
+    console.log('**********************');
+//3.Access and console.log "Waldo"
+
