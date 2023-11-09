@@ -237,3 +237,41 @@ if ( k % 2 === 0) {
     console.log(kittyTalk[randomAnswer]);
     }
 }
+console.log('**********************');
+
+
+
+////////////////////////////////
+//  Find the Median
+////////////////////////////////
+// Find the Median
+// Find the median number in the following nums array, then console.log that number.
+// hint if you check the length of the array / 2, you might get not get a whole number. 
+//In which case, look into Math.floor( // something )
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+const myAnswer = Math.floor(nums.length); //rounding to the nearest whole number
+console.log(myAnswer);
+    //this is the easiest approach, BUT the answer doesn't match the expected output, 
+    //because we are not sorting up the elements of the array.
+// Expected output:
+// => 15
+console.log('**********************');
+//if we incorporate the sorting, then the result will match our expected output.
+            //PSEUDO CODING
+            //a. sort the array in scending order
+            //b. figure out if the array has even or odd number of elements
+            //c. if odd number, then we take the one middle element, 
+            //if odd number of elements, then we take two elements in the middle and calculate their average
+            //d. loggin the result
+const nums2 = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+nums2.sort((a, b) => a - b); //sorting the array in ascending order
+const middleIndex = Math.floor(nums2.length / 2); //calculating the middle index
+
+if (nums2.length % 2 === 1) { //checking if the array has even or odd number of elements
+    const median = nums2[middleIndex];
+    console.log("The median nunmber is: ", median);
+} else { //if the array hav even number of elements, we take the average of the two middle elements.
+    const median2 = (nums2[middleIndex - 1] + nums2[middleIndex]) / 2;
+    console.log("The median number is: " , median2);
+}
