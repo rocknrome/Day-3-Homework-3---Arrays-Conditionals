@@ -211,8 +211,29 @@ console.log('**********************');
 //(index 1 cuz we remover the Eggbert which had index 1).
     const subArray = whereIsWaldo[1];
     const indexOfNeff = subArray.indexOf("Neff");
+//3.Access and console.log "Waldo"
     console.log("The index of Neff is: ");
     console.log(indexOfNeff);
     console.log('**********************');
-//3.Access and console.log "Waldo"
 
+
+////////////////////////////////
+//  Excited Kitten
+////////////////////////////////
+//Excited Kitten
+// Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
+// For every even number in your loop, log "...human...why you taking pictures of me?...",
+//"...the catnip made me do it...", or "...why does the red dot always get away..." at random.
+const kittyTalk = ["...human...why you taking pictures of me?...",
+"...the catnip made me do it...",
+"...why does the red dot always get away..."];
+//console.log(kittyTalk); //testing log
+
+for (k = 0; k <= 20; k++) {
+    console.log("Love me, pet me! HSSSSSS!");
+    
+if ( k % 2 === 0) {
+    const randomAnswer = Math.floor(Math.random() * kittyTalk.length);
+    console.log(kittyTalk[randomAnswer]);
+    }
+}
